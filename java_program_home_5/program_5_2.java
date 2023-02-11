@@ -1,12 +1,3 @@
-package java_program_home_5;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Map.Entry;
-
 // Задание 2.
 // Пусть дан список сотрудников:
 // Светлана Петрова
@@ -31,6 +22,14 @@ import java.util.Map.Entry;
 //Отсортировать по убыванию популярности.
 
 //Иван 4, ...
+
+package java_program_home_5;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class program_5_2 {
     
@@ -74,16 +73,15 @@ public class program_5_2 {
     }
   
     static LinkedHashMap<String, Integer> sortMap(HashMap<String, Integer> MapBefore) {
-        LinkedHashMap sortedMap = new LinkedHashMap<>();
-        ArrayList list = new ArrayList<>();
+        LinkedHashMap<String, Integer> sortedMap = new LinkedHashMap<>();
+        ArrayList<Integer>list = new ArrayList<>();
         
-        for (Map.Entry entry : MapBefore.entrySet()) {
+        for (Map.Entry<String, Integer> entry : MapBefore.entrySet()) {
             list.add(entry.getValue());
         }
-        Collections.sort(list);       
-        ArrayList <Integer>lst = new ArrayList<>(list);
-        for (int num : lst) {
-            for (Map.Entry entry : MapBefore.entrySet()) {
+        Collections.sort(list);     
+        for (int num : list) {
+            for (Map.Entry<String, Integer> entry : MapBefore.entrySet()) {
                 if (entry.getValue().equals(num)) {
                     sortedMap.put(entry.getKey(), num);
                 }
@@ -92,16 +90,15 @@ public class program_5_2 {
         return sortedMap;
     }
 
-    static LinkedHashMap<String, Integer> reverseMap(LinkedHashMap<String, Integer> MapBefore) {
-        LinkedHashMap TurnedMap = new LinkedHashMap<>();
-        ArrayList list = new ArrayList<>();
-        for (Map.Entry entry : MapBefore.entrySet()) {
+     static LinkedHashMap<String, Integer> reverseMap(LinkedHashMap<String, Integer> MapBefore) {
+        LinkedHashMap<String, Integer> TurnedMap = new LinkedHashMap<>();
+        ArrayList<Integer> list = new ArrayList<>();
+        for (Map.Entry<String, Integer> entry : MapBefore.entrySet()) {
                 list.add(entry.getValue());
         }      
-        Collections.reverse(list);        
-        ArrayList <Integer>lst = new ArrayList<>(list);
-        for (int num : lst) {
-            for (Map.Entry entry : MapBefore.entrySet()) {
+        Collections.reverse(list);    
+        for (int num : list) {
+            for (Map.Entry <String, Integer> entry : MapBefore.entrySet()) {
                 if (entry.getValue().equals(num)) {
                     TurnedMap.put(entry.getKey(), num);
                 }
