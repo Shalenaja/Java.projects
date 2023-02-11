@@ -56,6 +56,7 @@ public class notebook {
         } 
         return notebookList;       
     }
+
     public List<notebook> findNotebook_ram(HashSet<notebook> hashNotebook, Integer r) {
         List<notebook> notebookList = new ArrayList<notebook>();
         for (notebook notebook : hashNotebook) 
@@ -67,6 +68,7 @@ public class notebook {
         }              
         return notebookList;
     }
+
     public List<notebook> findNotebook_color(HashSet<notebook> hashNotebook, String str) {
         String color = str.toLowerCase();      
         List<notebook> notebookList = new ArrayList<notebook>();
@@ -79,6 +81,7 @@ public class notebook {
         }
         return notebookList;
     }
+    
     public List<notebook> findNotebook_price(HashSet<notebook> hashNotebook, String gradation) {
         List<notebook> notebookList = new ArrayList<notebook>();
         for (notebook notebook : hashNotebook)
