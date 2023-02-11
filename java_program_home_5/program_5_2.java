@@ -1,11 +1,3 @@
-package java_program_home_5;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 // Задание 2.
 // Пусть дан список сотрудников:
 // Светлана Петрова
@@ -30,6 +22,15 @@ import java.util.Map;
 //Отсортировать по убыванию популярности.
 
 //Иван 4, ...
+
+package java_program_home_5;
+
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class program_5_2 {
     
@@ -90,7 +91,8 @@ public class program_5_2 {
         return sortedMap;
     }
 
-    static LinkedHashMap<String, Integer> reverseMap(LinkedHashMap<String, Integer> MapBefore) {
+     static LinkedHashMap<String, Integer> reverseMap(LinkedHashMap<String, Integer> MapBefore) {
+
         LinkedHashMap<String, Integer> TurnedMap = new LinkedHashMap<>();
         ArrayList<Integer> list = new ArrayList<>();
         for (Map.Entry<String, Integer> entry : MapBefore.entrySet()) {
